@@ -1,5 +1,12 @@
 import styles from "./page.module.css";
 
-export default function ProductDetailPage() {
-  return <h1>Product</h1>;
+interface ProductDetailPageProps {
+  params: Promise<{ productId: string }>;
+}
+
+export default async function ProductDetailPage({
+  params,
+}: ProductDetailPageProps) {
+  const { productId } = await params;
+  return <h1>Product {productId}</h1>;
 }
