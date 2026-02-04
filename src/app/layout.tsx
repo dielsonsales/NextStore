@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "NextStore",
@@ -14,7 +15,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <header>
+          <nav>
+            <Link href="/products">Store</Link>
+            <Link href="/profile">Profile</Link>
+          </nav>
+        </header>
+        <main>{children}</main>
+        <footer>© 2026 NextStore</footer>
+      </body>
     </html>
   );
 }
