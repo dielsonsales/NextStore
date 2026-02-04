@@ -17,3 +17,17 @@ The project for now is a simple store MVP that will need to have the following f
 - Layout should be responsive with flexbox and grid.
 - Folder structure organized by features.
 - Simple unit tests.
+
+### Route Summary
+
+| URL Path        | Route Group | Physical File                         | Rendering Strategy                        |
+| --------------- | ----------- | ------------------------------------- | ----------------------------------------- |
+| `/`             | —           | `app/page.tsx`                        | **Redirect** (Server-side to `/products`) |
+| `/products`     | `(store)`   | `app/(store)/products/page.tsx`       | **SSG** (Default for static content)      |
+| `/product/[id]` | `(store)`   | `app/(store)/product/[id]/page.tsx`   | **Dynamic** (Uses Async `params` Promise) |
+| `/profile`      | `(profile)` | `app/(profile)/profile/page.tsx`      | **CSR** (Intended via `'use client'`)     |
+| `/edit-profile` | `(profile)` | `app/(profile)/edit-profile/page.tsx` | **CSR** (Intended via `'use client'`)     |
+
+### Technical Implementation Details
+
+- **Current State:** All pages are currently **Server Components** by default until the `'use client'` directive is explicitly added to the profile routes.
