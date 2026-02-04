@@ -1,7 +1,7 @@
 # Variables
 PM := pnpm
 
-.PHONY: dev build start lint format clean
+.PHONY: dev build start lint format clean pristine
 
 # Development server
 dev:
@@ -25,5 +25,8 @@ format:
 
 # Clean build artifacts
 clean:
-	rm -rf .next
+	rm -rf .next/dev
+
+pristine: clean
 	rm -rf node_modules
+	$(PM) install
