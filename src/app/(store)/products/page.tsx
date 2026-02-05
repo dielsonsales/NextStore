@@ -7,6 +7,7 @@ export default function ProductsPage() {
     { id: 2, title: "Product B", description: "Outro producto muito bom" },
     { id: 3, title: "Product C", description: "Esse já não é tão bom" },
   ];
+
   return (
     <>
       <h1>Produtos</h1>

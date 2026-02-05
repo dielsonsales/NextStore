@@ -2,11 +2,17 @@
 
 import { useEffect, useEffectEvent, useState } from "react";
 import styles from "./page.module.css";
+import { User } from "@/lib/types";
 
 const MOCK_USER_KEY = "mock_user";
 
+const DEFAULT_USER: User = {
+  name: "Usuário 1",
+  email: "usuario1@next-store.com.br",
+};
+
 export default function EditProfilePage() {
-  const [user, setUser] = useState({
+  const [user, setUser] = useState<User>({
     name: "",
     email: "",
   });
@@ -14,9 +20,9 @@ export default function EditProfilePage() {
   useEffect(() => {
     const savedData = localStorage.getItem(MOCK_USER_KEY);
     if (savedData) {
-      setUser(JSON.parse(savedData));
+      setUser(JSON.parse(savedData) as User);
     } else {
-      setUser({ name: "Usuário 1", email: "usuario1@next-store.com.br" });
+      setUser(DEFAULT_USER);
     }
   }, []);
 
