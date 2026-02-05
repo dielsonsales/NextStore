@@ -1,5 +1,5 @@
 # Variables
-PM := pnpm
+PM := npm
 
 .PHONY: dev build start lint format clean pristine
 

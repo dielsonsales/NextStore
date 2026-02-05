@@ -31,6 +31,7 @@ def should_skip(path_obj):
         'file_structure.md',
         'LICENSE',
         'favicon.ico',
+        'package-lock.json',
         'pnpm-lock.yaml',
         'pnpm-workspace.yaml',
         '.gitignore',
