@@ -3,6 +3,7 @@
 import { useEffect, useEffectEvent, useState } from "react";
 import styles from "./page.module.css";
 import { User } from "@/lib/types";
+import { redirect } from "next/navigation";
 
 const MOCK_USER_KEY = "mock_user";
 
@@ -25,6 +26,7 @@ export default function EditProfilePage() {
 
   const handleSave = useEffectEvent(() => {
     localStorage.setItem(MOCK_USER_KEY, JSON.stringify(user));
+    redirect("/profile");
   });
 
   return (

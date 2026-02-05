@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import { User } from "@/lib/types";
+import { redirect } from "next/navigation";
 
 const MOCK_USER_KEY = "mock_user";
 
@@ -16,6 +17,10 @@ export default function ProfilePage() {
     }
   }, []);
 
+  const editUserAction = () => {
+    redirect("/edit-profile");
+  };
+
   return (
     <>
       <h1>Perfil</h1>
@@ -25,6 +30,7 @@ export default function ProfilePage() {
       <p>
         <strong>Email:</strong> {user.email}
       </p>
+      <button onClick={editUserAction}>Editar</button>
     </>
   );
 }
