@@ -12,10 +12,7 @@ const DEFAULT_USER: User = {
 };
 
 export default function EditProfilePage() {
-  const [user, setUser] = useState<User>({
-    name: "",
-    email: "",
-  });
+  const [user, setUser] = useState<User>({ name: "", email: "" });
 
   useEffect(() => {
     const savedData = localStorage.getItem(MOCK_USER_KEY);

@@ -1,5 +1,30 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import styles from "./page.module.css";
+import { User } from "@/lib/types";
+
+const MOCK_USER_KEY = "mock_user";
 
 export default function ProfilePage() {
-  return <h1>Perfil</h1>;
+  const [user, setUser] = useState<User>({ name: "", email: "" });
+
+  useEffect(() => {
+    const savedData = localStorage.getItem(MOCK_USER_KEY);
+    if (savedData) {
+      setUser(JSON.parse(savedData) as User);
+    }
+  }, []);
+
+  return (
+    <>
+      <h1>Perfil</h1>
+      <p>
+        <strong>Name:</strong> {user.name}
+      </p>
+      <p>
+        <strong>Email:</strong> {user.email}
+      </p>
+    </>
+  );
 }
