@@ -1,5 +1,5 @@
 import styles from "./footer.module.css";
 
 export default function Footer() {
-  return <footer>© 2026 NextStore</footer>;
+  return <p>© 2026 NextStore</p>;
 }
