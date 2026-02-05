@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Link from "next/link";
+import NavBar from "@/components/layout/navbar/navbar";
+import Footer from "@/components/layout/footer/footer";
 
 export const metadata: Metadata = {
   title: "NextStore",
@@ -16,13 +17,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <header>
-          <nav>
-            <Link href="/products">Store</Link>
-            <Link href="/profile">Profile</Link>
-          </nav>
+          <NavBar />
         </header>
         <main>{children}</main>
-        <footer>© 2026 NextStore</footer>
+        <Footer />
       </body>
     </html>
   );
