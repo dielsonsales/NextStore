@@ -48,7 +48,7 @@ export default function ProductsPage() {
 
   return (
     <>
-      <h1>Next Store</h1>
+      <h1 className={styles.productsPageTitle}>Next Store</h1>
       <ul className={styles.productsGrid}>
         {MOCK_PRODUCTS.map((product) => (
           <li key={product.id} className={styles.productCard}>
@@ -60,9 +60,11 @@ export default function ProductsPage() {
                 width={500}
                 height={500}
               />
-              <h3>{product.title}</h3>
-              <p>{product.description}</p>
-              <Link href={`/product/${product.id}`}>Ver detalhes</Link>
+              <h3 className={styles.productTitle}>{product.title}</h3>
+              <p className={styles.productText}>{product.description}</p>
+              <Link href={`/product/${product.id}`}>
+                <span className={styles.productText}>Ver detalhes</span>
+              </Link>
             </article>
           </li>
         ))}
