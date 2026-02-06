@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useEffectEvent, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import { User } from "@/lib/types";
 import { useRouter } from "next/navigation";
@@ -25,10 +25,10 @@ export default function EditProfilePage() {
     }
   }, []);
 
-  const handleSave = useEffectEvent(() => {
+  function handleSave() {
     localStorage.setItem(MOCK_USER_KEY, JSON.stringify(user));
     router.push("/profile");
-  });
+  }
 
   return (
     <>
