@@ -1,12 +1,13 @@
+import { getProductById, MOCK_PRODUCTS } from "@/lib/data";
 import styles from "./page.module.css";
+import Image from "next/image";
 
 export const dynamicParams = true; // allows dynamic routes too
 export const revalidate = 3600; // 1 hour
 
 export async function generateStaticParams() {
-  const productIds = ["1", "2", "3"];
-  return productIds.map((id) => ({
-    productId: id,
+  return MOCK_PRODUCTS.map((p) => ({
+    productId: p.id.toString(),
   }));
 }
 
@@ -18,9 +19,19 @@ export default async function ProductDetailPage({
   params,
 }: ProductDetailPageProps) {
   const { productId } = await params;
+  const product = await getProductById(productId);
   return (
     <>
-      <h1>Product {productId}</h1>
+      <h1>{product?.title ?? ""}</h1>
+      {product && (
+        <Image
+          src={`/images/${product.image}`}
+          alt={product.title}
+          width={500}
+          height={500}
+        />
+      )}
+      <p>{product?.description ?? ""}</p>
       <p>This page was generated/update via ISR.</p>
     </>
   );
