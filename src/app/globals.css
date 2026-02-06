@@ -46,4 +46,5 @@ a {
   font-family: var(--font-montserrat), sans-serif;
   font-size: 32px;
   font-weight: 600;
+  padding: 20px;
 }
