@@ -31,9 +31,10 @@ export default function EditProfilePage() {
   }
 
   return (
-    <>
+    <div className={styles.editProfilePageContainer}>
       <h1 className="pageTitle1">Editar Perfil</h1>
       <form
+        className={styles.editProfilePageForm}
         onSubmit={(e) => {
           e.preventDefault();
           handleSave();
@@ -53,6 +54,6 @@ export default function EditProfilePage() {
         />
         <button type="submit">Salvar Alterações</button>
       </form>
-    </>
+    </div>
   );
 }

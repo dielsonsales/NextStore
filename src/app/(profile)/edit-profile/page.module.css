@@ -1,0 +1,9 @@
+.editProfilePageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.editProfilePageForm {
+  display: flex;
+  flex-direction: column;
+}

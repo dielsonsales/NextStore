@@ -23,7 +23,7 @@ export default function ProfilePage() {
   };
 
   return (
-    <>
+    <div className={styles.profilePageContainer}>
       <h1 className="pageTitle1">Perfil</h1>
       <p>
         <strong>Name:</strong> {user.name}
@@ -32,6 +32,6 @@ export default function ProfilePage() {
         <strong>Email:</strong> {user.email}
       </p>
       <button onClick={editUserAction}>Editar</button>
-    </>
+    </div>
   );
 }

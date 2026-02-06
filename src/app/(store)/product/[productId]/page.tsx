@@ -21,7 +21,7 @@ export default async function ProductDetailPage({
   const { productId } = await params;
   const product = await getProductById(productId);
   return (
-    <>
+    <div className={styles.productPageContainer}>
       <h1 className="pageTitle1">{product?.title ?? ""}</h1>
       {product && (
         <Image
@@ -33,6 +33,6 @@ export default async function ProductDetailPage({
       )}
       <p>{product?.description ?? ""}</p>
       <p>This page was generated/update via ISR.</p>
-    </>
+    </div>
   );
 }
