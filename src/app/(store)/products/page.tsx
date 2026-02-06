@@ -6,7 +6,7 @@ import { MOCK_PRODUCTS } from "@/lib/data";
 export default function ProductsPage() {
   return (
     <>
-      <h1 className={styles.productsPageTitle}>Next Store</h1>
+      <h1 className="pageTitle1">Next Store</h1>
       <ul className={styles.productsGrid}>
         {MOCK_PRODUCTS.map((product) => (
           <li key={product.id} className={styles.productCard}>

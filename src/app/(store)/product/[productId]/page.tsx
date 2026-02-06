@@ -22,7 +22,7 @@ export default async function ProductDetailPage({
   const product = await getProductById(productId);
   return (
     <>
-      <h1>{product?.title ?? ""}</h1>
+      <h1 className="pageTitle1">{product?.title ?? ""}</h1>
       {product && (
         <Image
           src={`/images/${product.image}`}

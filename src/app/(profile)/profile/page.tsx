@@ -24,7 +24,7 @@ export default function ProfilePage() {
 
   return (
     <>
-      <h1>Perfil</h1>
+      <h1 className="pageTitle1">Perfil</h1>
       <p>
         <strong>Name:</strong> {user.name}
       </p>

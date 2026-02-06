@@ -32,7 +32,7 @@ export default function EditProfilePage() {
 
   return (
     <>
-      <h1>Editar Perfil</h1>
+      <h1 className="pageTitle1">Editar Perfil</h1>
       <form
         onSubmit={(e) => {
           e.preventDefault();
