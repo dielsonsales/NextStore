@@ -22,17 +22,24 @@ export default async function ProductDetailPage({
   const product = await getProductById(productId);
   return (
     <div className={styles.productPageContainer}>
-      <h1 className="pageTitle1">{product?.title ?? ""}</h1>
-      {product && (
-        <Image
-          src={`/images/${product.image}`}
-          alt={product.title}
-          width={500}
-          height={500}
-        />
-      )}
-      <p>{product?.description ?? ""}</p>
-      <p>This page was generated/update via ISR.</p>
+      <div className={styles.productImageWrapper}>
+        {product && (
+          <Image
+            src={`/images/${product.image}`}
+            alt={product.title}
+            width={800}
+            height={800}
+            priority
+          />
+        )}
+      </div>
+      <div className={styles.productDetailsWrapper}>
+        <h1 className="pageTitle1">{product?.title}</h1>
+        <p className={styles.productDetailsText}>{product?.description}</p>
+        <p className={styles.productDetailsText}>
+          This page was generated/update via ISR.
+        </p>
+      </div>
     </div>
   );
 }

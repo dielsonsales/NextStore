@@ -1,4 +1,34 @@
 .productPageContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px 20px;
+  align-items: start;
+}
+
+.productImageWrapper {
+  width: 100%;
+}
+
+.productImageWrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.productDetailsWrapper {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+
+.productDetailsText {
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+@media (max-width: 768px) {
+  .productPageContainer {
+    grid-template-columns: 1fr; /* Stacks on mobile */
+  }
 }
