@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import { User } from "@/lib/types";
 import { useRouter } from "next/navigation";
+import { logoutAction } from "@/app/(auth)/login/actions";
 
 const MOCK_USER_KEY = "mock_user";
 
@@ -18,9 +19,14 @@ export default function ProfilePage() {
     }
   }, []);
 
-  const editUserAction = () => {
+  function editUserAction() {
     router.push("/edit-profile");
-  };
+  }
+
+  async function handleLogout() {
+    await logoutAction();
+    router.push("/products");
+  }
 
   return (
     <div className={styles.profilePageContainer}>
@@ -32,6 +38,7 @@ export default function ProfilePage() {
         <strong>Email:</strong> {user.email}
       </p>
       <button onClick={editUserAction}>Editar</button>
+      <button onClick={handleLogout}>Sair</button>
     </div>
   );
 }
