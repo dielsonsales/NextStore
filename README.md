@@ -9,6 +9,8 @@ NextStore is a high-performance web application built with **Next.js 16**. As an
 - **Framework:** Next.js 16 (using the stable **Turbopack** engine for builds).
 - **Styling:** CSS Modules, for the proximity with the bare-metal of the web and better performance overall (since Styled Components requires a runtime provider, using it often forces you to turn your layout or pages into Client Components).
 - **Runtime:** Node.js (utilizing the new `proxy.ts` for routing logic).
+- **Mock data:** The use of mocked data for products mean the Products route (`/products`) is static generated.
+- **Fake authentication:** Currently, trying to access the `/profile` or `/edit-profile` routes lead to the `/login` page if the user isn't authenticated. The authentication doesn't validate anything, it simply sets or removes the necessary cookies to simulate a "login" and "logout" action.
 
 ### Performance Strategy: Hybrid ISR
 
