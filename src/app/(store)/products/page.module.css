@@ -17,10 +17,6 @@
   height: auto;
 }
 
-.productTitle {
-  font-family: var(--font-montserrat), sans-serif;
-}
-
 .productText {
   font-family: var(--font-montserrat), sans-serif;
 }
