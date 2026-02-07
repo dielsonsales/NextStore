@@ -37,8 +37,20 @@ export default function ProfilePage() {
       <p>
         <strong>Email:</strong> {user.email}
       </p>
-      <button onClick={editUserAction}>Editar</button>
-      <button onClick={handleLogout}>Sair</button>
+      <div className={styles.profileButtonGroup}>
+        <button
+          className={styles.profilePrimaryButton}
+          onClick={editUserAction}
+        >
+          Editar
+        </button>
+        <button
+          className={styles.profileSecondaryButton}
+          onClick={handleLogout}
+        >
+          Sair
+        </button>
+      </div>
     </div>
   );
 }

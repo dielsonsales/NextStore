@@ -1,5 +1,51 @@
 .profilePageContainer {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  border: 1px solid #aeaeae;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
+  gap: 1.2rem;
+}
+
+.profileInfo {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.profileButtonGroup {
+  display: flex;
   gap: 10px;
+  margin-top: 1rem;
+}
+
+.profilePrimaryButton,
+.profileSecondaryButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2 ease;
+  flex: 1;
+}
+
+.profilePrimaryButton {
+  background-color: var(--foreground);
+  color: var(--background);
+  border: none;
+}
+
+.profileSecondaryButton {
+  background-color: transparent;
+  color: var(--foreground);
+  border: 1px solid #ccc;
+}
+
+.profilePrimaryButton:hover,
+.profileSecondaryButton:hover {
+  opacity: 0.8;
 }
