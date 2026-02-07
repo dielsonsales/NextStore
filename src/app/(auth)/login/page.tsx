@@ -15,7 +15,7 @@ export default function LoginPage() {
 
   return (
     <>
-      <h1>Login</h1>
+      <h1 className="pageTitle1">Login</h1>
       <form className={styles.loginPageForm} onSubmit={handleSubmit}>
         <input
           name="email"
