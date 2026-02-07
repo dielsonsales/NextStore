@@ -10,7 +10,7 @@ export default function ProductsPage() {
       <ul className={styles.productsGrid}>
         {MOCK_PRODUCTS.map((product) => (
           <li key={product.id} className={styles.productCard}>
-            <article>
+            <article style={{ display: "contents" }}>
               <Image
                 className={styles.productImage}
                 src={`/images/${product.image}`}
@@ -20,7 +20,10 @@ export default function ProductsPage() {
               />
               <h3 className={styles.productTitle}>{product.title}</h3>
               <p className={styles.productText}>{product.description}</p>
-              <Link href={`/product/${product.id}`}>
+              <Link
+                className={styles.productLink}
+                href={`/product/${product.id}`}
+              >
                 <span className={styles.productText}>Ver detalhes</span>
               </Link>
             </article>
