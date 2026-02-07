@@ -8,7 +8,6 @@ NextStore is a high-performance web application built with **Next.js 16**. As an
 
 - **Framework:** Next.js 16 (using the stable **Turbopack** engine for builds).
 - **Styling:** CSS Modules, for the proximity with the bare-metal of the web and better performance overall (since Styled Components requires a runtime provider, using it often forces you to turn your layout or pages into Client Components).
-- **Routing:** App Router with **Incremental Prefetching**, reducing total transfer sizes during navigation.
 - **Runtime:** Node.js (utilizing the new `proxy.ts` for routing logic).
 
 ### Performance Strategy: Hybrid ISR
