@@ -1,9 +1,44 @@
 .editProfilePageContainer {
-  display: flex;
-  flex-direction: column;
+  max-width: 500px;
+  margin: 2rem auto;
 }
 
 .editProfilePageForm {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.editProfileInputField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.editProfileText {
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.editProfileInput {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit; /* Crucial for Montserrat inheritance */
+  font-size: 1rem;
+}
+
+.editProfileSaveButton {
+  background-color: var(--foreground);
+  color: var(--background);
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
 }

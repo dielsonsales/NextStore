@@ -40,19 +40,27 @@ export default function EditProfilePage() {
           handleSave();
         }}
       >
-        <input
-          value={user.name}
-          onChange={(e) => {
-            setUser({ ...user, name: e.target.value });
-          }}
-        />
-        <input
-          value={user.email}
-          onChange={(e) => {
-            setUser({ ...user, email: e.target.value });
-          }}
-        />
-        <button type="submit">Salvar Alterações</button>
+        <div className={styles.editProfileInputField}>
+          <p className={styles.editProfileText}>Username:</p>
+          <input
+            className={styles.editProfileInput}
+            value={user.name}
+            onChange={(e) => {
+              setUser({ ...user, name: e.target.value });
+            }}
+          />
+          <p className={styles.editProfileText}>E-mail:</p>
+          <input
+            className={styles.editProfileInput}
+            value={user.email}
+            onChange={(e) => {
+              setUser({ ...user, email: e.target.value });
+            }}
+          />
+        </div>
+        <button className={styles.editProfileSaveButton} type="submit">
+          Salvar Alterações
+        </button>
       </form>
     </div>
   );
