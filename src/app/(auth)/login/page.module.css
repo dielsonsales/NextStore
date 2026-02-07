@@ -28,3 +28,7 @@
   font-weight: 600;
   transition: opacity 0.2s ease;
 }
+
+.loginButton:hover {
+  opacity: 0.8;
+}
