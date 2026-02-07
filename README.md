@@ -15,7 +15,7 @@ NextStore is a high-performance web application built with **Next.js 16**. As an
 The Product Detail route (`/product/[id]`) implements a Hybrid Incremental strategy:
 
 - **Build-time SSG:** `generateStaticParams` ensures top-tier SEO and instant loads for existing inventory.
-- **On-demand ISR:** `revalidate: 3600` and `dynamicParams: true` allow the store to scale infinitely without full redeploys, updating the background cache every hour.
+- **On-demand ISR:** `revalidate: 3600` and `dynamicParams: true` allow the store to scale infinitely without full redeploys, updating the background cache every hour (although the mock data in the project means only the existing products can be accessed).
 
 ### Development
 
