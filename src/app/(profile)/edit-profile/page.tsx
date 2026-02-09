@@ -41,16 +41,22 @@ export default function EditProfilePage() {
         }}
       >
         <div className={styles.editProfileInputField}>
-          <p className={styles.editProfileText}>Username:</p>
+          <label htmlFor="username" className={styles.editProfileText}>
+            Username:
+          </label>
           <input
+            id="username"
             className={styles.editProfileInput}
             value={user.name}
             onChange={(e) => {
               setUser({ ...user, name: e.target.value });
             }}
           />
-          <p className={styles.editProfileText}>E-mail:</p>
+          <label htmlFor="email" className={styles.editProfileText}>
+            E-mail:
+          </label>
           <input
+            id="email"
             className={styles.editProfileInput}
             value={user.email}
             onChange={(e) => {
