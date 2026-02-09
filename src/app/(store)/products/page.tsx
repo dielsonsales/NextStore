@@ -18,7 +18,7 @@ export default function ProductsPage() {
                 width={500}
                 height={500}
               />
-              <h3 className={styles.productTitle}>{product.title}</h3>
+              <h2 className={styles.productTitle}>{product.title}</h2>
               <p className={styles.productText}>{product.description}</p>
               <Link
                 className={styles.productLink}
