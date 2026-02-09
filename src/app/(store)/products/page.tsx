@@ -11,7 +11,7 @@ export default function ProductsPage() {
         <ul className={styles.productsGrid}>
           {MOCK_PRODUCTS.map((product) => (
             <li key={product.id} className={styles.productCard}>
-              <article style={{ display: "contents" }}>
+              <article className={styles.cardContainer}>
                 <Image
                   className={styles.productImage}
                   src={`/images/${product.image}`}
